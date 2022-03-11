@@ -63,8 +63,3 @@ app$callback(
 )
 
 app$run_server(host = '0.0.0.0')
-<<<<<<< HEAD:app.r
-
-
-=======
->>>>>>> 54072f42e732e394120d98671cbc2b29981be035:app.R
