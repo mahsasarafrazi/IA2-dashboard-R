@@ -4,6 +4,8 @@ library(dashCoreComponents)
 library(ggplot2)
 library(plotly)
 library(purrr)
+ 
+ #reading data from data
 
 data = read.csv(file = "data/processed/clean_df.csv")
 
@@ -16,7 +18,7 @@ app$layout(
       dccDropdown(
         id='rating-select',
         options = data$rating %>%  purrr::map(function(rating,pop) list(label = rating, value = rating)) , 
-        value=list("TV-G","TV-MA", "TV-14","TV-Y7","PG-13"),
+        value=list("TV-G","TV-MA", "TV-14","TV-Y7"),
         multi=TRUE),
       dccRangeSlider(
         id='my-range-slider',
@@ -61,3 +63,5 @@ app$callback(
 )
 
 app$run_server(host = '0.0.0.0')
+
+
